@@ -1,0 +1,21 @@
+[package]
+name = "rs-glfw3"
+version = "0.1.0"
+license = "BSD-3-Clause"
+authors = ["Raja Lehtihet <raja.lehtihet@gmail.com>", "Wael El Oraiby <wael.eloraiby@gmail.com>"]
+edition = "2018"
+description = "GLFW3 bindings (no dependency on std)"
+repository = "https://github.com/NeoCogi/rs-glfw3"
+readme = "README.md"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+withbindgen = ["bindgen"]
+
+[dependencies]
+rs-ctypes = "0.1.0"
+
+[build-dependencies]
+cc = { version = "1.0.58", features = ["parallel"] }
+bindgen = { version = "0.54.1", optional = true }
