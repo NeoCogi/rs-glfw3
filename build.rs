@@ -73,7 +73,7 @@ fn main() {
 
     let project_dir = env::var("CARGO_MANIFEST_DIR").unwrap();
     println!("cargo:rustc-link-search={}", project_dir); // the "-L" flag
-    println!("cargo:rustc-link-lib=glfw3"); // the "-l" flag
+    println!("cargo:rustc-link-lib=glfw"); // the "-l" flag
     println!("cargo:rustc-link-lib=c"); // the "-l" flag
 
     rebuild();
