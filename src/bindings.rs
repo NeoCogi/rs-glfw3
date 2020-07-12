@@ -342,18 +342,18 @@ pub struct max_align_t {
 #[test]
 fn bindgen_test_layout_max_align_t() {
     assert_eq!(
-        ::std::mem::size_of::<max_align_t>(),
+        ::core::mem::size_of::<max_align_t>(),
         32usize,
         concat!("Size of: ", stringify!(max_align_t))
     );
     assert_eq!(
-        ::std::mem::align_of::<max_align_t>(),
+        ::core::mem::align_of::<max_align_t>(),
         16usize,
         concat!("Alignment of ", stringify!(max_align_t))
     );
     assert_eq!(
         unsafe {
-            &(*(::std::ptr::null::<max_align_t>())).__clang_max_align_nonce1 as *const _ as usize
+            &(*(::core::ptr::null::<max_align_t>())).__clang_max_align_nonce1 as *const _ as usize
         },
         0usize,
         concat!(
@@ -365,7 +365,7 @@ fn bindgen_test_layout_max_align_t() {
     );
     assert_eq!(
         unsafe {
-            &(*(::std::ptr::null::<max_align_t>())).__clang_max_align_nonce2 as *const _ as usize
+            &(*(::core::ptr::null::<max_align_t>())).__clang_max_align_nonce2 as *const _ as usize
         },
         16usize,
         concat!(
@@ -418,17 +418,17 @@ pub struct __fsid_t {
 #[test]
 fn bindgen_test_layout___fsid_t() {
     assert_eq!(
-        ::std::mem::size_of::<__fsid_t>(),
+        ::core::mem::size_of::<__fsid_t>(),
         8usize,
         concat!("Size of: ", stringify!(__fsid_t))
     );
     assert_eq!(
-        ::std::mem::align_of::<__fsid_t>(),
+        ::core::mem::align_of::<__fsid_t>(),
         4usize,
         concat!("Alignment of ", stringify!(__fsid_t))
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<__fsid_t>())).__val as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<__fsid_t>())).__val as *const _ as usize },
         0usize,
         concat!(
             "Offset of field: ",
@@ -494,7 +494,7 @@ pub type uintmax_t = __uintmax_t;
 #[doc = "  @since Added in version 3.0."]
 #[doc = ""]
 #[doc = "  @ingroup context"]
-pub type GLFWglproc = ::std::option::Option<unsafe extern "C" fn()>;
+pub type GLFWglproc = ::core::option::Option<unsafe extern "C" fn()>;
 #[doc = " @brief Vulkan API function pointer type."]
 #[doc = ""]
 #[doc = "  Generic function pointer used for returning Vulkan API function pointers"]
@@ -506,7 +506,7 @@ pub type GLFWglproc = ::std::option::Option<unsafe extern "C" fn()>;
 #[doc = "  @since Added in version 3.2."]
 #[doc = ""]
 #[doc = "  @ingroup vulkan"]
-pub type GLFWvkproc = ::std::option::Option<unsafe extern "C" fn()>;
+pub type GLFWvkproc = ::core::option::Option<unsafe extern "C" fn()>;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct GLFWmonitor {
@@ -535,7 +535,7 @@ pub struct GLFWcursor {
 #[doc = "  @since Added in version 3.0."]
 #[doc = ""]
 #[doc = "  @ingroup init"]
-pub type GLFWerrorfun = ::std::option::Option<
+pub type GLFWerrorfun = ::core::option::Option<
     unsafe extern "C" fn(arg1: rs_ctypes::c_int, arg2: *const rs_ctypes::c_char),
 >;
 #[doc = " @brief The function signature for window position callbacks."]
@@ -554,7 +554,7 @@ pub type GLFWerrorfun = ::std::option::Option<
 #[doc = "  @since Added in version 3.0."]
 #[doc = ""]
 #[doc = "  @ingroup window"]
-pub type GLFWwindowposfun = ::std::option::Option<
+pub type GLFWwindowposfun = ::core::option::Option<
     unsafe extern "C" fn(arg1: *mut GLFWwindow, arg2: rs_ctypes::c_int, arg3: rs_ctypes::c_int),
 >;
 #[doc = " @brief The function signature for window resize callbacks."]
@@ -572,7 +572,7 @@ pub type GLFWwindowposfun = ::std::option::Option<
 #[doc = "  @glfw3 Added window handle parameter."]
 #[doc = ""]
 #[doc = "  @ingroup window"]
-pub type GLFWwindowsizefun = ::std::option::Option<
+pub type GLFWwindowsizefun = ::core::option::Option<
     unsafe extern "C" fn(arg1: *mut GLFWwindow, arg2: rs_ctypes::c_int, arg3: rs_ctypes::c_int),
 >;
 #[doc = " @brief The function signature for window close callbacks."]
@@ -588,7 +588,7 @@ pub type GLFWwindowsizefun = ::std::option::Option<
 #[doc = "  @glfw3 Added window handle parameter."]
 #[doc = ""]
 #[doc = "  @ingroup window"]
-pub type GLFWwindowclosefun = ::std::option::Option<unsafe extern "C" fn(arg1: *mut GLFWwindow)>;
+pub type GLFWwindowclosefun = ::core::option::Option<unsafe extern "C" fn(arg1: *mut GLFWwindow)>;
 #[doc = " @brief The function signature for window content refresh callbacks."]
 #[doc = ""]
 #[doc = "  This is the function signature for window refresh callback functions."]
@@ -602,7 +602,7 @@ pub type GLFWwindowclosefun = ::std::option::Option<unsafe extern "C" fn(arg1: *
 #[doc = "  @glfw3 Added window handle parameter."]
 #[doc = ""]
 #[doc = "  @ingroup window"]
-pub type GLFWwindowrefreshfun = ::std::option::Option<unsafe extern "C" fn(arg1: *mut GLFWwindow)>;
+pub type GLFWwindowrefreshfun = ::core::option::Option<unsafe extern "C" fn(arg1: *mut GLFWwindow)>;
 #[doc = " @brief The function signature for window focus/defocus callbacks."]
 #[doc = ""]
 #[doc = "  This is the function signature for window focus callback functions."]
@@ -618,7 +618,7 @@ pub type GLFWwindowrefreshfun = ::std::option::Option<unsafe extern "C" fn(arg1:
 #[doc = ""]
 #[doc = "  @ingroup window"]
 pub type GLFWwindowfocusfun =
-    ::std::option::Option<unsafe extern "C" fn(arg1: *mut GLFWwindow, arg2: rs_ctypes::c_int)>;
+    ::core::option::Option<unsafe extern "C" fn(arg1: *mut GLFWwindow, arg2: rs_ctypes::c_int)>;
 #[doc = " @brief The function signature for window iconify/restore callbacks."]
 #[doc = ""]
 #[doc = "  This is the function signature for window iconify/restore callback"]
@@ -635,7 +635,7 @@ pub type GLFWwindowfocusfun =
 #[doc = ""]
 #[doc = "  @ingroup window"]
 pub type GLFWwindowiconifyfun =
-    ::std::option::Option<unsafe extern "C" fn(arg1: *mut GLFWwindow, arg2: rs_ctypes::c_int)>;
+    ::core::option::Option<unsafe extern "C" fn(arg1: *mut GLFWwindow, arg2: rs_ctypes::c_int)>;
 #[doc = " @brief The function signature for framebuffer resize callbacks."]
 #[doc = ""]
 #[doc = "  This is the function signature for framebuffer resize callback"]
@@ -651,7 +651,7 @@ pub type GLFWwindowiconifyfun =
 #[doc = "  @since Added in version 3.0."]
 #[doc = ""]
 #[doc = "  @ingroup window"]
-pub type GLFWframebuffersizefun = ::std::option::Option<
+pub type GLFWframebuffersizefun = ::core::option::Option<
     unsafe extern "C" fn(arg1: *mut GLFWwindow, arg2: rs_ctypes::c_int, arg3: rs_ctypes::c_int),
 >;
 #[doc = " @brief The function signature for mouse button callbacks."]
@@ -672,7 +672,7 @@ pub type GLFWframebuffersizefun = ::std::option::Option<
 #[doc = "  @glfw3 Added window handle and modifier mask parameters."]
 #[doc = ""]
 #[doc = "  @ingroup input"]
-pub type GLFWmousebuttonfun = ::std::option::Option<
+pub type GLFWmousebuttonfun = ::core::option::Option<
     unsafe extern "C" fn(
         arg1: *mut GLFWwindow,
         arg2: rs_ctypes::c_int,
@@ -697,7 +697,7 @@ pub type GLFWmousebuttonfun = ::std::option::Option<
 #[doc = ""]
 #[doc = "  @ingroup input"]
 pub type GLFWcursorposfun =
-    ::std::option::Option<unsafe extern "C" fn(arg1: *mut GLFWwindow, arg2: f64, arg3: f64)>;
+    ::core::option::Option<unsafe extern "C" fn(arg1: *mut GLFWwindow, arg2: f64, arg3: f64)>;
 #[doc = " @brief The function signature for cursor enter/leave callbacks."]
 #[doc = ""]
 #[doc = "  This is the function signature for cursor enter/leave callback functions."]
@@ -713,7 +713,7 @@ pub type GLFWcursorposfun =
 #[doc = ""]
 #[doc = "  @ingroup input"]
 pub type GLFWcursorenterfun =
-    ::std::option::Option<unsafe extern "C" fn(arg1: *mut GLFWwindow, arg2: rs_ctypes::c_int)>;
+    ::core::option::Option<unsafe extern "C" fn(arg1: *mut GLFWwindow, arg2: rs_ctypes::c_int)>;
 #[doc = " @brief The function signature for scroll callbacks."]
 #[doc = ""]
 #[doc = "  This is the function signature for scroll callback functions."]
@@ -729,7 +729,7 @@ pub type GLFWcursorenterfun =
 #[doc = ""]
 #[doc = "  @ingroup input"]
 pub type GLFWscrollfun =
-    ::std::option::Option<unsafe extern "C" fn(arg1: *mut GLFWwindow, arg2: f64, arg3: f64)>;
+    ::core::option::Option<unsafe extern "C" fn(arg1: *mut GLFWwindow, arg2: f64, arg3: f64)>;
 #[doc = " @brief The function signature for keyboard key callbacks."]
 #[doc = ""]
 #[doc = "  This is the function signature for keyboard key callback functions."]
@@ -748,7 +748,7 @@ pub type GLFWscrollfun =
 #[doc = "  @glfw3 Added window handle, scancode and modifier mask parameters."]
 #[doc = ""]
 #[doc = "  @ingroup input"]
-pub type GLFWkeyfun = ::std::option::Option<
+pub type GLFWkeyfun = ::core::option::Option<
     unsafe extern "C" fn(
         arg1: *mut GLFWwindow,
         arg2: rs_ctypes::c_int,
@@ -772,7 +772,7 @@ pub type GLFWkeyfun = ::std::option::Option<
 #[doc = ""]
 #[doc = "  @ingroup input"]
 pub type GLFWcharfun =
-    ::std::option::Option<unsafe extern "C" fn(arg1: *mut GLFWwindow, arg2: rs_ctypes::c_uint)>;
+    ::core::option::Option<unsafe extern "C" fn(arg1: *mut GLFWwindow, arg2: rs_ctypes::c_uint)>;
 #[doc = " @brief The function signature for Unicode character with modifiers"]
 #[doc = "  callbacks."]
 #[doc = ""]
@@ -791,7 +791,7 @@ pub type GLFWcharfun =
 #[doc = "  @since Added in version 3.1."]
 #[doc = ""]
 #[doc = "  @ingroup input"]
-pub type GLFWcharmodsfun = ::std::option::Option<
+pub type GLFWcharmodsfun = ::core::option::Option<
     unsafe extern "C" fn(arg1: *mut GLFWwindow, arg2: rs_ctypes::c_uint, arg3: rs_ctypes::c_int),
 >;
 #[doc = " @brief The function signature for file drop callbacks."]
@@ -808,7 +808,7 @@ pub type GLFWcharmodsfun = ::std::option::Option<
 #[doc = "  @since Added in version 3.1."]
 #[doc = ""]
 #[doc = "  @ingroup input"]
-pub type GLFWdropfun = ::std::option::Option<
+pub type GLFWdropfun = ::core::option::Option<
     unsafe extern "C" fn(
         arg1: *mut GLFWwindow,
         arg2: rs_ctypes::c_int,
@@ -829,7 +829,7 @@ pub type GLFWdropfun = ::std::option::Option<
 #[doc = ""]
 #[doc = "  @ingroup monitor"]
 pub type GLFWmonitorfun =
-    ::std::option::Option<unsafe extern "C" fn(arg1: *mut GLFWmonitor, arg2: rs_ctypes::c_int)>;
+    ::core::option::Option<unsafe extern "C" fn(arg1: *mut GLFWmonitor, arg2: rs_ctypes::c_int)>;
 #[doc = " @brief The function signature for joystick configuration callbacks."]
 #[doc = ""]
 #[doc = "  This is the function signature for joystick configuration callback"]
@@ -845,7 +845,7 @@ pub type GLFWmonitorfun =
 #[doc = ""]
 #[doc = "  @ingroup input"]
 pub type GLFWjoystickfun =
-    ::std::option::Option<unsafe extern "C" fn(arg1: rs_ctypes::c_int, arg2: rs_ctypes::c_int)>;
+    ::core::option::Option<unsafe extern "C" fn(arg1: rs_ctypes::c_int, arg2: rs_ctypes::c_int)>;
 #[doc = " @brief Video mode type."]
 #[doc = ""]
 #[doc = "  This describes a single video mode."]
@@ -876,17 +876,17 @@ pub struct GLFWvidmode {
 #[test]
 fn bindgen_test_layout_GLFWvidmode() {
     assert_eq!(
-        ::std::mem::size_of::<GLFWvidmode>(),
+        ::core::mem::size_of::<GLFWvidmode>(),
         24usize,
         concat!("Size of: ", stringify!(GLFWvidmode))
     );
     assert_eq!(
-        ::std::mem::align_of::<GLFWvidmode>(),
+        ::core::mem::align_of::<GLFWvidmode>(),
         4usize,
         concat!("Alignment of ", stringify!(GLFWvidmode))
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<GLFWvidmode>())).width as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<GLFWvidmode>())).width as *const _ as usize },
         0usize,
         concat!(
             "Offset of field: ",
@@ -896,7 +896,7 @@ fn bindgen_test_layout_GLFWvidmode() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<GLFWvidmode>())).height as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<GLFWvidmode>())).height as *const _ as usize },
         4usize,
         concat!(
             "Offset of field: ",
@@ -906,7 +906,7 @@ fn bindgen_test_layout_GLFWvidmode() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<GLFWvidmode>())).redBits as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<GLFWvidmode>())).redBits as *const _ as usize },
         8usize,
         concat!(
             "Offset of field: ",
@@ -916,7 +916,7 @@ fn bindgen_test_layout_GLFWvidmode() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<GLFWvidmode>())).greenBits as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<GLFWvidmode>())).greenBits as *const _ as usize },
         12usize,
         concat!(
             "Offset of field: ",
@@ -926,7 +926,7 @@ fn bindgen_test_layout_GLFWvidmode() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<GLFWvidmode>())).blueBits as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<GLFWvidmode>())).blueBits as *const _ as usize },
         16usize,
         concat!(
             "Offset of field: ",
@@ -936,7 +936,7 @@ fn bindgen_test_layout_GLFWvidmode() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<GLFWvidmode>())).refreshRate as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<GLFWvidmode>())).refreshRate as *const _ as usize },
         20usize,
         concat!(
             "Offset of field: ",
@@ -971,17 +971,17 @@ pub struct GLFWgammaramp {
 #[test]
 fn bindgen_test_layout_GLFWgammaramp() {
     assert_eq!(
-        ::std::mem::size_of::<GLFWgammaramp>(),
+        ::core::mem::size_of::<GLFWgammaramp>(),
         32usize,
         concat!("Size of: ", stringify!(GLFWgammaramp))
     );
     assert_eq!(
-        ::std::mem::align_of::<GLFWgammaramp>(),
+        ::core::mem::align_of::<GLFWgammaramp>(),
         8usize,
         concat!("Alignment of ", stringify!(GLFWgammaramp))
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<GLFWgammaramp>())).red as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<GLFWgammaramp>())).red as *const _ as usize },
         0usize,
         concat!(
             "Offset of field: ",
@@ -991,7 +991,7 @@ fn bindgen_test_layout_GLFWgammaramp() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<GLFWgammaramp>())).green as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<GLFWgammaramp>())).green as *const _ as usize },
         8usize,
         concat!(
             "Offset of field: ",
@@ -1001,7 +1001,7 @@ fn bindgen_test_layout_GLFWgammaramp() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<GLFWgammaramp>())).blue as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<GLFWgammaramp>())).blue as *const _ as usize },
         16usize,
         concat!(
             "Offset of field: ",
@@ -1011,7 +1011,7 @@ fn bindgen_test_layout_GLFWgammaramp() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<GLFWgammaramp>())).size as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<GLFWgammaramp>())).size as *const _ as usize },
         24usize,
         concat!(
             "Offset of field: ",
@@ -1041,17 +1041,17 @@ pub struct GLFWimage {
 #[test]
 fn bindgen_test_layout_GLFWimage() {
     assert_eq!(
-        ::std::mem::size_of::<GLFWimage>(),
+        ::core::mem::size_of::<GLFWimage>(),
         16usize,
         concat!("Size of: ", stringify!(GLFWimage))
     );
     assert_eq!(
-        ::std::mem::align_of::<GLFWimage>(),
+        ::core::mem::align_of::<GLFWimage>(),
         8usize,
         concat!("Alignment of ", stringify!(GLFWimage))
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<GLFWimage>())).width as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<GLFWimage>())).width as *const _ as usize },
         0usize,
         concat!(
             "Offset of field: ",
@@ -1061,7 +1061,7 @@ fn bindgen_test_layout_GLFWimage() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<GLFWimage>())).height as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<GLFWimage>())).height as *const _ as usize },
         4usize,
         concat!(
             "Offset of field: ",
@@ -1071,7 +1071,7 @@ fn bindgen_test_layout_GLFWimage() {
         )
     );
     assert_eq!(
-        unsafe { &(*(::std::ptr::null::<GLFWimage>())).pixels as *const _ as usize },
+        unsafe { &(*(::core::ptr::null::<GLFWimage>())).pixels as *const _ as usize },
         8usize,
         concat!(
             "Offset of field: ",
