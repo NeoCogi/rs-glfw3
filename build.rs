@@ -28,7 +28,6 @@
 
 use std::env;
 
-#[cfg(feature = "withbindgen")]
 fn rebuild() {
     use std::path::PathBuf;
 
@@ -65,9 +64,6 @@ fn rebuild() {
         .expect("Couldn't write bindings!");
 }
 
-#[cfg(not(feature = "withbindgen"))]
-fn rebuild() {
-}
 
 fn main() {
 
